@@ -133,4 +133,3 @@ const validPassports = passports.filter((passport) => {
 }).length;
 
 console.log("valid passports:", validPassports);
-// passports.forEach((passport) => console.log(passport, "\n"));
