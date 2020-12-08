@@ -41,7 +41,6 @@ lineReader.on("close", () => {
   while (shouldRun) {
     if (!instructions[nextIndex].ran) {
       nextIndex = runInstruction(instructions[nextIndex], nextIndex);
-      console.log("nextIndex", nextIndex);
     } else {
       shouldRun = false;
     }
