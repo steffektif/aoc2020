@@ -30,13 +30,7 @@ const findAll = (color) => {
   const contents = bagsMap.get(color).contents;
   const amounts = bagsMap.get(color).amounts;
 
-  let sum = 1;
-
-  contents.forEach(
-    (content, index) => (sum += amounts[index] * findAll(content))
-  );
-
-  return sum;
+  return contents.reduce((sum, content, index) => sum += amounts[index] * findAll(content), 1)
 };
 
 lineReader.on("close", () => {
