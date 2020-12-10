@@ -25,9 +25,8 @@ lineReader.on("close", () => {
   let jolts = 0;
 
   for (let index = 0; index < ascendingAdapters.length; index++) {
-    console.log("adap", ascendingAdapters[index]);
     let diff = ascendingAdapters[index] - jolts;
-    console.log("diff", diff);
+
     if (diff === 3) {
       differenceThree = differenceThree + 1;
     }
